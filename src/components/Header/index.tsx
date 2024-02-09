@@ -1,7 +1,5 @@
 import { FaGithub } from 'react-icons/fa'
 
-import './Header.css'
-
 const Header = () => (
   <>
     <div className='quote'>

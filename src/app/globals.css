@@ -7,17 +7,101 @@
   src: url(onesize.ttf);
 }
 
-body {
-  background: #120548;
-  font-family: onesize, monospace;
-  color: #d000e8;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  overflow-y: hidden;
+.quote span:hover,
+.roles span:hover,
+.help span:hover {
+  background-color: #908dff;
+  cursor: default;
 }
 
-div {
-  margin-bottom: 0.5em;
+.social > * :hover,
+a:hover {
+  color: #908dff;
+}
+
+.terminalContainer {
+  overflow-y: hidden !important;
+}
+
+@layer components {
+  body {
+    @apply p-2;
+    background: #120548;
+    font-family: onesize, monospace;
+    color: #d000e8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .quote,
+  .roles,
+  .blog,
+  .social,
+  .help,
+  .nickname {
+    @apply flex justify-center text-center;
+  }
+
+  .terminal {
+    @apply pl-3;
+  }
+
+  .terminalOutput,
+  .terminalInput {
+    @apply font-mono text-xs;
+  }
+
+  .quotes,
+  .roles,
+  .blog,
+  .social,
+  .help,
+  .nickname {
+    @apply flex justify-center text-center;
+  }
+
+  .nickname {
+    @apply text-5xl my-10;
+    color: #908dff;
+  }
+
+  .quote {
+    @apply flex flex-col items-center mt-1 text-base;
+  }
+
+  .roles {
+    @apply flex flex-row text-base mb-1;
+  }
+
+  .social {
+    @apply flex flex-row text-lg space-x-3 items-center;
+  }
+
+  .help {
+    @apply flex flex-row text-base;
+  }
+
+  .blog {
+    @apply text-base decoration-0;
+  }
+
+  @media (max-width: 500px) {
+    .roles span {
+      font-size: 0.65em;
+    }
+
+    .quote {
+      font-size: 0.65em;
+    }
+
+    .social > * {
+      font-size: 0.8em;
+    }
+
+    .blog {
+      font-size: 0.8em;
+    }
+  }
 }
