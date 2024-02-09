@@ -10,6 +10,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@typebot.io/js": "^0.2.41",
+    "@typebot.io/nextjs": "^0.2.41",
     "javascript-terminal": "^1.1.1",
     "next": "14.1.0",
     "react": "^18",
