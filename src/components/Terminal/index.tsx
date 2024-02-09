@@ -1,3 +1,4 @@
+// @ts-ignore
 import ReactTerminal, { ReactThemes } from 'react-terminal-component'
 
 import { emulatorState } from './emulatorState'
