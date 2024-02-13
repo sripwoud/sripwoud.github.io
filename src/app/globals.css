@@ -1,17 +1,9 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 @font-face {
   font-family: onesize;
   src: url(onesize.ttf);
-}
-
-.quote span:hover,
-.roles span:hover,
-.help span:hover {
-  background-color: #908dff;
-  cursor: default;
 }
 
 .social > * :hover,
@@ -23,16 +15,18 @@ a:hover {
   overflow-y: hidden !important;
 }
 
+@layer utitilities {
+  .bg-highlight:hover {
+    background-color: #908dff;
+  }
+}
+
 @layer components {
   body {
-    @apply p-2;
+    @apply p-2 overflow-hidden antialiased;
     background: #120548;
     font-family: onesize, monospace;
     color: #d000e8;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-    overflow-y: hidden;
   }
 
   .quote,
@@ -45,12 +39,7 @@ a:hover {
   }
 
   .terminal {
-    @apply pl-3;
-  }
-
-  .terminalOutput,
-  .terminalInput {
-    @apply font-mono text-xs;
+    @apply m-5;
   }
 
   .quotes,
