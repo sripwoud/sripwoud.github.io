@@ -1,2 +1,2 @@
 export { Header } from './Header'
-export { Terminal } from './Terminal'
+export { DynamicTerminal } from './Terminal'

@@ -1,6 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 @font-face {
   font-family: onesize;
@@ -45,12 +44,7 @@ a:hover {
   }
 
   .terminal {
-    @apply pl-3;
-  }
-
-  .terminalOutput,
-  .terminalInput {
-    @apply font-mono text-xs;
+    @apply m-5;
   }
 
   .quotes,

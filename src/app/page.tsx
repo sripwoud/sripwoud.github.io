@@ -1,12 +1,12 @@
 'use client'
 import { Bubble } from '@typebot.io/nextjs'
-import { Header, Terminal } from '@components'
+import { Header, DynamicTerminal } from '@components'
 
 export default function Home() {
   return (
     <>
       <Header />
-      <Terminal />
+      <DynamicTerminal />
       <Bubble
         typebot='sripwoud-contact-form'
         theme={{

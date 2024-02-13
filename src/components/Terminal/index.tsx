@@ -1,14 +1,15 @@
 // @ts-ignore
-import ReactTerminal, { ReactThemes } from 'react-terminal-component'
+import ReactTerminal from 'react-terminal-component'
+import dynamic from 'next/dynamic'
+
 import { emulatorState } from './emulatorState'
 
 const Terminal = () => (
-  <div>
+  <div className='terminal'>
     <ReactTerminal
-      promptSymbol='➜'
+      promptSymbol='❯'
       emulatorState={emulatorState}
       theme={{
-        ...ReactThemes.dye,
         background: '#120548',
         promptSymbolColor: '#d000e8',
         commandColor: '#908dff',
@@ -19,4 +20,9 @@ const Terminal = () => (
   </div>
 )
 
-export { Terminal }
+const DynamicTerminal = dynamic(() => Promise.resolve(Terminal), {
+  ssr: false,
+  loading: () => <></>,
+}) as typeof Terminal
+
+export { DynamicTerminal }
