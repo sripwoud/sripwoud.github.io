@@ -28,14 +28,15 @@ French, English, German, (Spanish)
   },
   '/about/experiences': {
     content: `YEAR            ROLE                                   COMPANY
-2022-present    Web3 Engineer                          Ethereum Foundation
+2025-present    Software Engineer                      Exodus
+2025            Web3 Engineer                          Ethereum Foundation
 2021            Blockchain Engineer                    Exodus
 2020            Full Stack Web Developer               Airbus
 2019            Data Analyst                           Airbus
 2017-2018       Project and Performance Manager        Airbus
 2013-2016       Technical Data Engineer                Airbus
 2012            Intern, Standardization Office         Renault
-2011            Intern, Supply & Trading dpt           Total`,
+2011            Intern, Supply & Trading Dpt           Total`,
     canModify: false,
   },
   '/portfolio': {},
