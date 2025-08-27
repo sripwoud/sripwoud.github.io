@@ -20,7 +20,8 @@ const customCommandMapping = Terminal.CommandMapping.create({
             'clear:       clear terminal',
             'open <portfolio-item>: open in new tab a portfolio item',
             'ls <folder>: list content',
-          ].join('\n'),
+          ]
+            .join('\n'),
         ),
       }
     },

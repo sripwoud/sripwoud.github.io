@@ -1,6 +1,6 @@
 'use client'
+import { DynamicTerminal, Header } from '@components'
 import { Bubble } from '@typebot.io/nextjs'
-import { Header, DynamicTerminal } from '@components'
 
 export default function Home() {
   return (

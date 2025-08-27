@@ -1,6 +1,6 @@
 // @ts-ignore
-import ReactTerminal from 'react-terminal-component'
 import dynamic from 'next/dynamic'
+import ReactTerminal from 'react-terminal-component'
 
 import { emulatorState } from './emulatorState'
 

@@ -1,0 +1,23 @@
+[tasks.dev]
+alias = "d"
+description = "Start next dev server"
+run = "bun next dev"
+
+[tasks.build]
+alias = "b"
+description = "Build the project"
+run = "bun next build"
+
+[tasks.start]
+alias = "s"
+description = "Start the production server"
+run = "bun next start"
+
+[tools]
+bun = "latest"
+dprint = "latest"
+hk = "latest"
+"npm:@biomejs/biome" = "latest"
+"cargo:convco" = "latest"
+"npm:typescript" = "latest"
+pkl = "latest"
