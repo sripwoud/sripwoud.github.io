@@ -23,10 +23,10 @@ a:hover {
 
 @layer components {
   body {
-    @apply p-2 overflow-hidden antialiased;
-    background: #120548;
     font-family: onesize, monospace;
     color: #d000e8;
+    background: #120548;
+    @apply p-2 overflow-hidden antialiased;
   }
 
   .quote,
@@ -52,8 +52,8 @@ a:hover {
   }
 
   .nickname {
-    @apply text-5xl my-10;
     color: #908dff;
+    @apply text-5xl my-10;
   }
 
   .quote {

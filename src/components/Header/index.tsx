@@ -12,14 +12,14 @@ const Header = () => (
       <span className='bg-highlight'>Web3 Engineer</span>
     </div>
     <div className='social'>
-      <a href='https://github.com/sripwoud' target='_blank' rel='noreferrer'>
+      <a href='https://github.com/sripwoud' rel='noreferrer' target='_blank'>
         <FaGithub />
       </a>
       <a
-        href='https://listed.to/@sripwoud'
         className='blog'
-        target='_blank'
+        href='https://listed.to/@sripwoud'
         rel='noreferrer'
+        target='_blank'
       >
         Blog
       </a>

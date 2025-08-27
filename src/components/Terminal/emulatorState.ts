@@ -1,4 +1,3 @@
-// @ts-ignore
 import * as Terminal from 'javascript-terminal'
 
 import { FILE_SYSTEM } from './constants'
@@ -6,7 +5,6 @@ import { links } from './links'
 
 const customFileSystem = Terminal.FileSystem.create(FILE_SYSTEM)
 
-// @ts-ignore
 const customCommandMapping = Terminal.CommandMapping.create({
   ...Terminal.defaultCommandMapping,
   '?': {
@@ -28,7 +26,7 @@ const customCommandMapping = Terminal.CommandMapping.create({
     optDef: {},
   },
   open: {
-    // @ts-ignore
+    // @ts-expect-error
     function: (_, opts) => {
       if (opts.length !== 1) {
         return {
@@ -40,7 +38,7 @@ const customCommandMapping = Terminal.CommandMapping.create({
 
       let tab = ''
       if (opts[0] in links) {
-        // @ts-ignore
+        // @ts-expect-error
         tab = links[opts[0]]
       } else if (!opts[0].startsWith('http')) {
         return {

@@ -1,7 +1,9 @@
 {
-  "root": false,
-  "$schema": "https://biomejs.dev/schemas/2.0.6/schema.json",
-  "files": { "includes": ["**", "!**/routeTree.gen.ts"] },
+  "$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
+  // organize imports with dprint
+  "assist": {
+    "actions": { "source": { "organizeImports": "off", "useSortedAttributes": "on", "useSortedProperties": "on" } },
+  },
   // format with dprint
   "formatter": {
     "enabled": false,
@@ -15,13 +17,6 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "complexity": {
-        "useLiteralKeys": "off",
-      },
-      "correctness": {
-        // @tanstack/form form fields use children prop
-        "noChildrenProp": "off",
-      },
       "recommended": true,
       "style": {
         "noParameterAssign": "error",
@@ -37,10 +32,15 @@
       },
     },
   },
-  // organize imports with dprint
-  "assist": {
-    "actions": { "source": { "organizeImports": "off", "useSortedAttributes": "on", "useSortedProperties": "on" } },
-  },
+  "overrides": [
+    // https://github.com/biomejs/biome/issues/7223
+    {
+      "linter": {
+        "rules": { "suspicious": { "noUnknownAtRules": "off" }, "complexity": { "noImportantStyles": "off" } },
+      },
+      "includes": ["src/app/globals.css"],
+    },
+  ],
   "vcs": {
     "enabled": true,
     "clientKind": "git",
