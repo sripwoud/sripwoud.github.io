@@ -1,2 +1,0 @@
-[install.lockfile]
-print = "yarn" # required for CI/CLI tools that don't support bun.lockb files
