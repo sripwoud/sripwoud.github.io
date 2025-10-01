@@ -1,6 +1,6 @@
 import { FaGithub } from 'react-icons/fa'
 
-const Header = () => (
+export const Header = () => (
   <>
     <div className='quote'>
       <span className='bg-highlight'>{`'We are not what we know but what we are ready to learn.'`}</span>
@@ -29,5 +29,3 @@ const Header = () => (
     </div>
   </>
 )
-
-export { Header }

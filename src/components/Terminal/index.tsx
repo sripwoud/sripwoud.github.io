@@ -19,9 +19,7 @@ const Terminal = () => (
   </div>
 )
 
-const DynamicTerminal = dynamic(() => Promise.resolve(Terminal), {
+export const DynamicTerminal = dynamic(() => Promise.resolve(Terminal), {
   ssr: false,
   loading: () => <></>,
 }) as typeof Terminal
-
-export { DynamicTerminal }

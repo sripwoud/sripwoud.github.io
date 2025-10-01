@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
   // organize imports with dprint
   "assist": {
     "actions": { "source": { "organizeImports": "off", "useSortedAttributes": "on", "useSortedProperties": "on" } },
@@ -32,13 +32,14 @@
       },
     },
   },
+  "root": false,
   "overrides": [
     // https://github.com/biomejs/biome/issues/7223
     {
+      "includes": ["**/*.css"],
       "linter": {
         "rules": { "suspicious": { "noUnknownAtRules": "off" }, "complexity": { "noImportantStyles": "off" } },
       },
-      "includes": ["src/app/globals.css"],
     },
   ],
   "vcs": {

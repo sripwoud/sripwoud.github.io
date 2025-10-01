@@ -1,17 +1,33 @@
-[tasks.dev]
-alias = "d"
-description = "Start next dev server"
-run = "bun next dev"
-
 [tasks.build]
 alias = "b"
 description = "Build the project"
-run = "bun next build"
+run = ["bun tsc -b", "bun vite build"]
+quiet = true
 
-[tasks.start]
-alias = "s"
-description = "Start the production server"
-run = "bun next start"
+[tasks.dev]
+alias = "d"
+description = "Start the dev server"
+run = "bun vite"
+quiet = true
+
+[tasks.fmt]
+hide = true
+run = "dprint fmt"
+
+[tasks.lint]
+hide = true
+run = "biome check --config-path=biome.jsonc --fix --no-errors-on-unmatched"
+
+[tasks.fix]
+alias = "f"
+depends = ["fmt", "lint"]
+description = "Format and fix lint issues"
+
+[tasks.preview]
+alias = "p"
+description = "Preview the app"
+run = "bun vite preview"
+quiet = true
 
 [tools]
 bun = "latest"
