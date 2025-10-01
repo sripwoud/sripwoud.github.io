@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: onesize;
-  src: url(onesize.ttf);
+  src: url(/onesize.ttf);
 }
 
 .social > * :hover,
