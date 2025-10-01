@@ -1,9 +1,8 @@
 import * as Terminal from 'javascript-terminal'
 
-import { FILE_SYSTEM } from './constants'
-import { links } from './links'
+import { fileSystem, links } from 'const'
 
-const customFileSystem = Terminal.FileSystem.create(FILE_SYSTEM)
+const customFileSystem = Terminal.FileSystem.create(fileSystem)
 
 const customCommandMapping = Terminal.CommandMapping.create({
   ...Terminal.defaultCommandMapping,

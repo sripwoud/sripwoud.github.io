@@ -36,7 +36,7 @@ jobs:
           mise_toml: |
             [tasks]
             "check:format" = { run = "dprint check --excludes mise.toml" }
-            "check:lint" = { run = "biome check" }
+            "check:lint" = { run = "biome check --config-path=biome.jsonc --no-errors-on-unmatched" }
             "check:types" = { run = "tsc" }
             "check" = { depends = "check:*" }
             [tools]

@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: onesize;
+  src: url(onesize.ttf);
+}
+
+.social > * :hover,
+a:hover {
+  color: #908dff;
+}
+
+.terminalContainer {
+  overflow-y: hidden !important;
+}
+
+.bg-highlight:hover {
+  background-color: #908dff;
+}
+
+body {
+  padding: 0.5rem;
+  overflow: hidden;
+  font-family: onesize, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #d000e8;
+  background: #120548;
+}
+
+.quote,
+.roles,
+.blog,
+.social,
+.help,
+.nickname {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.terminal {
+  margin: 1.25rem;
+}
+
+.quotes,
+.roles,
+.blog,
+.social,
+.help,
+.nickname {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.nickname {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 3rem;
+  color: #908dff;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+}
+
+.roles {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 1.125rem;
+}
+
+.help {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+}
+
+.blog {
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .roles span {
+    font-size: 0.65em;
+  }
+
+  .quote {
+    font-size: 0.65em;
+  }
+
+  .social > * {
+    font-size: 0.8em;
+  }
+
+  .blog {
+    font-size: 0.8em;
+  }
+}
