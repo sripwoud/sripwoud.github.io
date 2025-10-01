@@ -1,4 +1,4 @@
-import { Bubble } from '@typebot.io/nextjs'
+import { Bubble } from '@typebot.io/react'
 import { DynamicTerminal, Header } from 'c'
 
 export const App = () => (
