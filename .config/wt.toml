@@ -1,0 +1,14 @@
+# Worktree lifecycle hooks — see `wt hook --help`.
+# User-level hooks (mount-config, mise trust, ./.wt-setup.sh) run first, from
+# ~/.config/worktrunk/config.toml.
+
+[pre-start]
+# Reflink node_modules/ + dist/ from the primary worktree. ~/code is btrfs, so
+# this is copy-on-write — near-instant vs. a cold install.
+deps = "wt step copy-ignored"
+# Reconcile the copied tree against bun.lock; a no-op when already satisfied.
+install = "bun i"
+
+[post-start]
+# Backgrounded: `bun tsc -b` + `bun vite build`. Runs after pre-start completes.
+build = "mise run build"
