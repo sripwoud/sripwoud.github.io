@@ -4,6 +4,10 @@ description = "Build the project"
 run = ["bun tsc -b", "bun vite build"]
 quiet = true
 
+[tasks."check:deps"]
+hide = true
+run = "bun scripts/check-installed-tree.ts"
+
 [tasks."check:format"]
 hide = true
 run = "dprint check"
@@ -26,6 +30,10 @@ alias = "d"
 description = "Start the dev server"
 run = "bun vite"
 quiet = true
+
+[tasks.install]
+hide = true
+run = "bun i --frozen-lockfile"
 
 [tasks.fmt]
 hide = true
