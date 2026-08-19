@@ -21,9 +21,10 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "baseUrl": "src",
     "paths": {
-      "c": ["components"]
+      "App": ["./src/App"],
+      "c": ["./src/components"],
+      "const": ["./src/const"]
     }
   },
   "include": ["src"]
