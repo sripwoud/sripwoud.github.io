@@ -7,5 +7,6 @@ const plugins = [react(), tailwindcss(), tsconfigPaths()]
 
 export default defineConfig(({ mode }) => ({
   plugins,
+  resolve: { dedupe: ['react', 'react-dom'] },
   server: { open: mode === 'development' },
 }))
