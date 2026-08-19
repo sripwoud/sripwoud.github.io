@@ -4,6 +4,23 @@ description = "Build the project"
 run = ["bun tsc -b", "bun vite build"]
 quiet = true
 
+[tasks."check:format"]
+hide = true
+run = "dprint check"
+
+[tasks."check:lint"]
+hide = true
+run = "biome check --config-path=biome.jsonc --no-errors-on-unmatched"
+
+[tasks."check:types"]
+hide = true
+run = "tsc"
+
+[tasks.check]
+alias = "c"
+depends = ["check:*"]
+description = "Check formatting, lint and types"
+
 [tasks.dev]
 alias = "d"
 description = "Start the dev server"
@@ -34,6 +51,6 @@ bun = "latest"
 dprint = "latest"
 hk = "latest"
 "npm:@biomejs/biome" = "2.2.4"
-"cargo:convco" = "latest"
+"github:convco/convco" = "latest"
 "npm:typescript" = "5.9.3"
 pkl = "latest"

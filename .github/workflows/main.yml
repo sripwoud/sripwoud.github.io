@@ -32,17 +32,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: jdx/mise-action@v2
-        with:
-          mise_toml: |
-            [tasks]
-            "check:format" = { run = "dprint check --excludes mise.toml" }
-            "check:lint" = { run = "biome check --config-path=biome.jsonc --no-errors-on-unmatched" }
-            "check:types" = { run = "tsc" }
-            "check" = { depends = "check:*" }
-            [tools]
-            bun = "latest"
-            dprint = "latest"
-            "npm:@biomejs/biome" = "2.2.4"
-            "npm:typescript" = "5.9.3"
       - run: bun i
       - run: mise r check
