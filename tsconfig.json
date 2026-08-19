@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
     "paths": {
-      "c": ["components"]
+      "App": ["./src/App"],
+      "c": ["./src/components"],
+      "const": ["./src/const"]
     }
   },
   "files": [],
