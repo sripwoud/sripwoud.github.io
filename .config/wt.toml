@@ -3,6 +3,9 @@
 # ~/.config/worktrunk/config.toml.
 
 [pre-start]
+# Wire the pre-commit hook: `hk install` only runs from ./setup, which a wt
+# worktree never executes. Idempotent, writes to the clone's shared git config.
+hooks = "hk install"
 # Reflink node_modules/ + dist/ from the primary worktree. ~/code is btrfs, so
 # this is copy-on-write — near-instant vs. a cold install.
 deps = "wt step copy-ignored"
