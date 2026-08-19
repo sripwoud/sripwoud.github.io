@@ -10,7 +10,7 @@ local linters  = new Mapping<String, Step> {
     stage = "*"
   }
   ["typescript"]  {
-    check = "tsc"
+    check = "tsc -b"
   }
 }
 

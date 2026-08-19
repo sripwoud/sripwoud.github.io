@@ -14,7 +14,7 @@ run = "biome check --config-path=biome.jsonc --no-errors-on-unmatched"
 
 [tasks."check:types"]
 hide = true
-run = "tsc"
+run = "tsc -b"
 
 [tasks.check]
 alias = "c"
