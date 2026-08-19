@@ -32,7 +32,6 @@
       },
     },
   },
-  "root": false,
   "overrides": [
     // https://github.com/biomejs/biome/issues/7223
     {
@@ -42,6 +41,8 @@
       },
     },
   ],
+  // must stay a root config: --config-path loads this file twice, and the
+  // "root": false that silences that also silently drops useIgnoreFile (#18)
   "vcs": {
     "enabled": true,
     "clientKind": "git",

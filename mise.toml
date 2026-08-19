@@ -10,7 +10,7 @@ run = "dprint check"
 
 [tasks."check:lint"]
 hide = true
-run = "biome check --config-path=biome.jsonc --no-errors-on-unmatched"
+run = "biome check"
 
 [tasks."check:types"]
 hide = true
@@ -33,7 +33,7 @@ run = "dprint fmt"
 
 [tasks.lint]
 hide = true
-run = "biome check --config-path=biome.jsonc --fix --no-errors-on-unmatched"
+run = "biome check --fix"
 
 [tasks.fix]
 alias = "f"
